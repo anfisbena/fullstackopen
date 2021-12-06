@@ -18,12 +18,25 @@ const Suma=()=>{
   )
 }
 
+const Suma2=(props)=>{
+  return(
+    <p>is {props.number1+props.number2}</p>
+  )
+}
+const Suma3=(a,b)=>{
+  return(
+    <p>is: {a+b}</p>
+  )
+}
+
 const App = () => {
   return(
     <div>
       <p>Hello World, it´s me... Mario</p>
       <GetDate/>
       <p>also i can tell you somenthing... <Suma/></p>
+      <p>Coded in another way: <Suma2 number1={10}number2={20}/></p>
+      <Suma3 a={10}b={20}/>
     </div>
   )
 }
