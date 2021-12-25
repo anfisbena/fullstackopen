@@ -8,20 +8,28 @@ import Mapeo from './modules/Mapeo';
 
 const App = () => {
   const course = 'Half Stack application development'
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
+  const parts = [
+    {
+      name: 'Fundamentals of React',
+      exercises: 10
+    },
+    {
+      name: 'Using props to pass data',
+      exercises: 7
+    },
+    {
+      name: 'State of a component',
+      exercises: 14
+    }
+  ]
 
   return (
     <div>
       <h1><Header title={course}/></h1>
-      <Content subtitle={part1} value={exercises1}/>
-      <Content subtitle={part2} value={exercises2}/>
-      <Content subtitle={part3} value={exercises3}/>
-      <Total Total={exercises1 + exercises2 + exercises3}/>
+      <Content subtitle={part1.name} value={part1.exercises}/>
+      <Content subtitle={part2.name} value={part2.exercises}/>
+      <Content subtitle={part3.name} value={part3.exercises}/>
+      <Total Total={part1.exercises + part2.exercises + part3.exercises}/>
       <p>{Expe(2,3)}</p>
       <p>{Mapeo}</p>
     </div>
