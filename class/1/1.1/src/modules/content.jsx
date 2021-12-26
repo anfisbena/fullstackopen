@@ -1,13 +1,15 @@
 import React from "react";
 
-const Content=props=>{
+const Content=(props)=>{
   return(
+    props.parts.map(part=>
     <>
     <p>
-      {props.subtitle} {props.value}
+    {part.name+" "+part.exercises}
     </p>
     </>
-  )
-}
+    )
+    
+  )}
 
 export default Content;

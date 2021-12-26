@@ -1,11 +1,15 @@
 import React from "react";
 
-const Total=(props)=>{
+const Content=(props)=>{
+let total=0
+props.parts.map(part=>total+=part.exercises)
   return(
     <>
-      <p>Number of exercises {props.Total}</p>
+    <p>
+    {"Number of Exercises "+total}
+    </p>
     </>
-  )
-};
+    )   
+  }
 
-export default Total;
+export default Content;
