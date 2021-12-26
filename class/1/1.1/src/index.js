@@ -27,9 +27,9 @@ const App = () => {
 
   return (
     <div>
-      <h1><Header title={course.name}/></h1>
-      <Content parts={course.parts} />
-      <Total parts={course.parts} />
+      <h1><Header title={course}/></h1>
+      <Content parts={course} />
+      <Total parts={course} />
       <p>{Expe(2,3)}</p>
       <p>{Mapeo}</p>
     </div>
